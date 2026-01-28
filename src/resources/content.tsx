@@ -238,14 +238,6 @@ const publications: Publications = {
   description: `Academic publications by ${person.name}`,
   items: [
     {
-      title: "Quantum machine learning for intrusion detection of distributed denial of service attacks: A comparative overview",
-      type: "conference",
-      venue: "Quantum Computing, Communication, and Simulation, SPIE",
-      year: "2021",
-      doi: "https://doi.org/10.1117/12.2593297",
-      authors: ["E. Payares", "J. C. Martinez-Santos"],
-    },
-    {
       title: "Advancements in quantum machine learning for intrusion detection: A comprehensive overview",
       type: "book-chapter",
       venue: "Advances in Digital Crime, Forensics, and Cyber Terrorism, IGI Global",
@@ -285,7 +277,14 @@ const publications: Publications = {
       doi: "https://doi.org/10.1088/1742-6596/2090/1/012171",
       authors: ["E. Payares", "J. Martinez-Santos"],
     },
-
+    {
+      title: "Quantum machine learning for intrusion detection of distributed denial of service attacks: A comparative overview",
+      type: "conference",
+      venue: "Quantum Computing, Communication, and Simulation, SPIE",
+      year: "2021",
+      doi: "https://doi.org/10.1117/12.2593297",
+      authors: ["E. Payares", "J. C. Martinez-Santos"],
+    },
   ],
 };
 
