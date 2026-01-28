@@ -193,7 +193,7 @@ const schema: SchemaConfig = {
   type: "Person",
   name: "Esteban Payares",
   description: home.description,
-  email: "estebandpc@outlook.com",
+  email: "estebanpc@duck.com",
 };
 
 // social links

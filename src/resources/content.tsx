@@ -7,7 +7,7 @@ const person: Person = {
   name: "Esteban Payares",
   role: "Quantum Learning Theory Researcher",
   avatar: "/images/esteban-profile.png",
-  email: "estebandpc@outlook.com",
+  email: "estebanpc@duck.com",
   location: "Europe/Paris",
   languages: ["Spanish (Native)", "English (C1)", "French (A2)"],
 };
