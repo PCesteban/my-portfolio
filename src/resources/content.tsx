@@ -258,6 +258,7 @@ const publications: Publications = {
       type: "conference",
       venue: "Working Notes of the Conference and Labs of the Evaluation Forum (CLEF 2024), Grenoble, France",
       year: "2024",
+      doi: "https://ceur-ws.org/Vol-3740/paper-304.pdf",
       authors: ["E. Payares", "E. Puertas", "J. C. Martinez-Santos"],
     },
     {
