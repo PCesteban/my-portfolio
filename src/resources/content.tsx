@@ -1,49 +1,40 @@
-import { About, Blog, Gallery, Home, Newsletter, Person, Social, Work } from "@/types";
-import { Line, Row, Text } from "@once-ui-system/core";
+import { About, Activities, Blog, Gallery, Home, Music, Newsletter, Person, Publications, Social, Work } from "@/types";
+import { Text } from "@once-ui-system/core";
 
 const person: Person = {
-  firstName: "Selene",
-  lastName: "Yu",
-  name: `Selene Yu`,
-  role: "Design Engineer",
-  avatar: "/images/avatar.jpg",
-  email: "example@gmail.com",
-  location: "Asia/Jakarta", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
-  languages: ["English", "Bahasa"], // optional: Leave the array empty if you don't want to display languages
+  firstName: "Esteban",
+  lastName: "Payares",
+  name: "Esteban Payares",
+  role: "Quantum Learning Theory Researcher",
+  avatar: "/images/esteban-profile.png",
+  email: "estebandpc@outlook.com",
+  location: "Europe/Paris",
+  languages: ["Spanish (Native)", "English (C1)", "French (A2)"],
 };
 
 const newsletter: Newsletter = {
-  display: true,
+  display: false,
   title: <>Subscribe to {person.firstName}'s Newsletter</>,
-  description: <>My weekly newsletter about creativity and engineering</>,
+  description: <>Updates on quantum computing and machine learning research</>,
 };
 
 const social: Social = [
-  // Links are automatically displayed.
-  // Import new icons in /once-ui/icons.ts
-  // Set essentials: true for links you want to show on the about page
   {
     name: "GitHub",
     icon: "github",
-    link: "https://github.com/once-ui-system",
+    link: "https://github.com/PCesteban",
     essential: true,
   },
   {
     name: "LinkedIn",
     icon: "linkedin",
-    link: "https://www.linkedin.com/company/once-ui/",
+    link: "https://www.linkedin.com/in/esteban-pc",
     essential: true,
   },
   {
-    name: "Instagram",
-    icon: "instagram",
-    link: "https://www.instagram.com/once_ui/",
-    essential: false,
-  },
-  {
-    name: "Threads",
-    icon: "threads",
-    link: "https://www.threads.com/@once_ui",
+    name: "Google Scholar",
+    icon: "scholar",
+    link: "https://scholar.google.com/citations?user=ugNHJsAAAAAJ&hl=es",
     essential: true,
   },
   {
@@ -58,26 +49,18 @@ const home: Home = {
   path: "/",
   image: "/images/og/home.jpg",
   label: "Home",
-  title: `${person.name}'s Portfolio`,
-  description: `Portfolio website showcasing my work as a ${person.role}`,
-  headline: <>Building bridges between design and code</>,
+  title: `${person.name} – Quantum Learning Theory | Mathematical Physics`,
+  description: `Portfolio of ${person.name}, ${person.role}`,
+  headline: <>Quantum Learning Theory | Mathematical Physics</>,
   featured: {
-    display: true,
-    title: (
-      <Row gap="12" vertical="center">
-        <strong className="ml-4">Once UI</strong>{" "}
-        <Line background="brand-alpha-strong" vert height="20" />
-        <Text marginRight="4" onBackground="brand-medium">
-          Featured work
-        </Text>
-      </Row>
-    ),
-    href: "/work/building-once-ui-a-customizable-design-system",
+    display: false,
+    title: <>Featured</>,
+    href: "/projects",
   },
   subline: (
     <>
-    I'm Selene, a design engineer at <Text as="span" size="xl" weight="strong">ONCE UI</Text>, where I craft intuitive <br /> user experiences. After hours, I build my own projects.
-</>
+      I'm Esteban, a Quantum Algorithm Engineer at <Text as="span" size="xl" weight="strong">IQM</Text> focused on quantum machine learning and its applications in real world and foundational Physics problems.
+    </>
   ),
 };
 
@@ -85,7 +68,7 @@ const about: About = {
   path: "/about",
   label: "About",
   title: `About – ${person.name}`,
-  description: `Meet ${person.name}, ${person.role} from ${person.location}`,
+  description: `Meet ${person.name}, ${person.role}`,
   tableOfContent: {
     display: true,
     subItems: false,
@@ -94,139 +77,122 @@ const about: About = {
     display: true,
   },
   calendar: {
-    display: true,
-    link: "https://cal.com",
+    display: false,
+    link: "",
   },
   intro: {
     display: true,
     title: "Introduction",
     description: (
       <>
-        Selene is a Jakarta-based design engineer with a passion for transforming complex challenges
-        into simple, elegant design solutions. Her work spans digital interfaces, interactive
-        experiences, and the convergence of design and technology.
+        Esteban is a quantum algorithm engineer with a background in applying quantum computing
+        techniques to cybersecurity and natural language processing. His earlier research focused on developing
+        quantum algorithms for intrusion detection, DDoS attack classification, and NLP tasks. More recently,
+        his interests have shifted toward deeper questions in quantum learning theory, foundational physics problems,
+        and quantum neuromorphic computing.
       </>
     ),
   },
   work: {
-    display: true, // set to false to hide this section
+    display: true,
     title: "Work Experience",
     experiences: [
       {
-        company: "FLY",
-        timeframe: "2022 - Present",
-        role: "Senior Design Engineer",
+        company: "IQM Quantum Computers",
+        timeframe: "Feb 2025 – Present",
+        role: "Quantum Machine Learning Intern",
         achievements: [
-          <>
-            Redesigned the UI/UX for the FLY platform, resulting in a 20% increase in user
-            engagement and 30% faster load times.
-          </>,
-          <>
-            Spearheaded the integration of AI tools into design workflows, enabling designers to
-            iterate 50% faster.
-          </>,
+          <>Researching quantum kernel methods and projected quantum kernels in practical applications.</>,
+          <>Developing a quantum kernel method framework.</>,
         ],
-        images: [
-          // optional: leave the array empty if you don't want to display images
-          {
-            src: "/images/projects/project-01/cover-01.jpg",
-            alt: "Once UI Project",
-            width: 16,
-            height: 9,
-          },
-        ],
+        images: [],
       },
       {
-        company: "Creativ3",
-        timeframe: "2018 - 2022",
-        role: "Lead Designer",
+        company: "CNRS, Laboratoire de Physique des Solides",
+        timeframe: "May 2024 – Aug 2024",
+        role: "Research Intern",
         achievements: [
-          <>
-            Developed a design system that unified the brand across multiple platforms, improving
-            design consistency by 40%.
-          </>,
-          <>
-            Led a cross-functional team to launch a new product line, contributing to a 15% increase
-            in overall company revenue.
-          </>,
+          <>Conducted research on spiking neural networks in solid state and neuromorphic computing.</>,
+        ],
+        images: [],
+      },
+      {
+        company: "Ormuco Inc.",
+        timeframe: "Feb 2022 – Aug 2024",
+        role: "DevOps Engineer",
+        achievements: [
+          <>Implemented CI/CD pipelines and infrastructure automation.</>,
+          <>Managed cloud infrastructure and deployment processes.</>,
+        ],
+        images: [],
+      },
+      {
+        company: "Universidad Tecnológica de Bolívar",
+        timeframe: "Jan 2021 – Aug 2023",
+        role: "Research Assistant",
+        achievements: [
+          <>Published research on quantum machine learning for cybersecurity applications.</>,
+          <>Contributed to research on blockchain and microgrid power distribution.</>,
         ],
         images: [],
       },
     ],
   },
   studies: {
-    display: true, // set to false to hide this section
-    title: "Studies",
+    display: true,
+    title: "Education",
     institutions: [
       {
-        name: "University of Jakarta",
-        description: <>Studied software engineering.</>,
+        name: "Université Paris-Saclay (2023 – 2025)",
+        description: <>Master of Science (MSc.) in Quantum & Distributed Computer Science</>,
       },
       {
-        name: "Build the Future",
-        description: <>Studied online marketing and personal branding.</>,
+        name: "Universidad Tecnológica de Bolívar (2016 – 2021)",
+        description: <>Bachelor of Engineering (BE) in Electronic Engineering</>,
       },
     ],
   },
   technical: {
-    display: true, // set to false to hide this section
-    title: "Technical skills",
+    display: true,
+    title: "Technical Skills",
     skills: [
       {
-        title: "Figma",
+        title: "Quantum Computing",
         description: (
-          <>Able to prototype in Figma with Once UI with unnatural speed.</>
+          <>Experienced with quantum algorithms, variational circuits, and quantum machine learning frameworks.</>
         ),
         tags: [
-          {
-            name: "Figma",
-            icon: "figma",
-          },
+          { name: "Qiskit" },
+          { name: "Pennylane" },
+          { name: "Cirq" },
         ],
-        // optional: leave the array empty if you don't want to display images
-        images: [
-          {
-            src: "/images/projects/project-01/cover-02.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
-          {
-            src: "/images/projects/project-01/cover-03.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
-        ],
+        images: [],
       },
       {
-        title: "Next.js",
+        title: "Machine Learning & AI",
         description: (
-          <>Building next gen apps with Next.js + Once UI + Supabase.</>
+          <>Building and deploying ML models for classification, NLP, and cybersecurity applications.</>
         ),
         tags: [
-          {
-            name: "JavaScript",
-            icon: "javascript",
-          },
-          {
-            name: "Next.js",
-            icon: "nextjs",
-          },
-          {
-            name: "Supabase",
-            icon: "supabase",
-          },
+          { name: "Python" },
+          { name: "TensorFlow" },
+          { name: "PyTorch" },
+          { name: "Scikit-learn" },
         ],
-        // optional: leave the array empty if you don't want to display images
-        images: [
-          {
-            src: "/images/projects/project-01/cover-04.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
+        images: [],
+      },
+      {
+        title: "DevOps & Cloud",
+        description: (
+          <>Infrastructure automation, CI/CD, and cloud platform management.</>
+        ),
+        tags: [
+          { name: "Docker" },
+          { name: "Kubernetes" },
+          { name: "AWS" },
+          { name: "GitLab CI" },
         ],
+        images: [],
       },
     ],
   },
@@ -235,19 +201,15 @@ const about: About = {
 const blog: Blog = {
   path: "/blog",
   label: "Blog",
-  title: "Writing about design and tech...",
-  description: `Read what ${person.name} has been up to recently`,
-  // Create new blog posts by adding a new .mdx file to app/blog/posts
-  // All posts will be listed on the /blog route
+  title: "Blog – Esteban Payares",
+  description: `Thoughts on quantum computing, machine learning, and research`,
 };
 
 const work: Work = {
-  path: "/work",
-  label: "Work",
+  path: "/projects",
+  label: "Projects",
   title: `Projects – ${person.name}`,
-  description: `Design and dev projects by ${person.name}`,
-  // Create new project pages by adding a new .mdx file to app/blog/posts
-  // All projects will be listed on the /home and /work routes
+  description: `Research and development projects by ${person.name}`,
 };
 
 const gallery: Gallery = {
@@ -255,50 +217,131 @@ const gallery: Gallery = {
   label: "Gallery",
   title: `Photo gallery – ${person.name}`,
   description: `A photo collection by ${person.name}`,
-  // Images by https://lorant.one
-  // These are placeholder images, replace with your own
   images: [
-    {
-      src: "/images/gallery/horizontal-1.jpg",
-      alt: "image",
-      orientation: "horizontal",
-    },
-    {
-      src: "/images/gallery/vertical-4.jpg",
-      alt: "image",
-      orientation: "vertical",
-    },
-    {
-      src: "/images/gallery/horizontal-3.jpg",
-      alt: "image",
-      orientation: "horizontal",
-    },
-    {
-      src: "/images/gallery/vertical-1.jpg",
-      alt: "image",
-      orientation: "vertical",
-    },
-    {
-      src: "/images/gallery/vertical-2.jpg",
-      alt: "image",
-      orientation: "vertical",
-    },
-    {
-      src: "/images/gallery/horizontal-2.jpg",
-      alt: "image",
-      orientation: "horizontal",
-    },
-    {
-      src: "/images/gallery/horizontal-4.jpg",
-      alt: "image",
-      orientation: "horizontal",
-    },
-    {
-      src: "/images/gallery/vertical-3.jpg",
-      alt: "image",
-      orientation: "vertical",
-    },
+    { src: "/images/gallery/photo-01.jpeg", alt: "Photo 1", orientation: "vertical" },
+    { src: "/images/gallery/photo-02.jpeg", alt: "Photo 2", orientation: "vertical" },
+    { src: "/images/gallery/photo-03.jpeg", alt: "Photo 3", orientation: "vertical" },
+    { src: "/images/gallery/photo-04.jpeg", alt: "Photo 4", orientation: "vertical" },
+    { src: "/images/gallery/photo-05.jpeg", alt: "Photo 5", orientation: "vertical" },
+    { src: "/images/gallery/photo-06.jpeg", alt: "Photo 6", orientation: "vertical" },
+    { src: "/images/gallery/photo-07.jpeg", alt: "Photo 7", orientation: "vertical" },
+    { src: "/images/gallery/photo-08.jpeg", alt: "Photo 8", orientation: "vertical" },
+    { src: "/images/gallery/photo-09.jpeg", alt: "Photo 9", orientation: "vertical" },
+    { src: "/images/gallery/photo-10.jpeg", alt: "Photo 10", orientation: "vertical" },
   ],
 };
 
-export { person, social, newsletter, home, about, blog, work, gallery };
+const publications: Publications = {
+  path: "/publications",
+  label: "Publications",
+  title: `Publications – ${person.name}`,
+  description: `Academic publications by ${person.name}`,
+  items: [
+    {
+      title: "Quantum Machine Learning for DDoS Attack Detection",
+      type: "conference",
+      venue: "SPIE Optical Engineering + Applications",
+      year: "2021",
+      doi: "https://doi.org/10.1117/12.2594681",
+      authors: ["E. Payares", "J. Martinez-Santos"],
+    },
+
+    {
+      title: "Quantum Feature Selection for Gender Identification in Author Profiling",
+      type: "conference",
+      venue: "CLEF 2024 - Conference and Labs of the Evaluation Forum",
+      year: "2024",
+      doi: "https://ceur-ws.org/Vol-3740/paper-216.pdf",
+      authors: ["E. Payares", "J. Martinez-Santos"],
+    },
+    {
+      title: "Quantum Machine Learning for Intrusion Detection Systems",
+      type: "book-chapter",
+      venue: "IGI Global",
+      year: "2023",
+      doi: "https://doi.org/10.4018/978-1-6684-7535-5.ch006",
+      authors: ["E. Payares", "J. Martinez-Santos"],
+    },
+    {
+      title: "Quantum Fourier Transform Enhancement for DDoS Detection",
+      type: "conference",
+      venue: "AIP Conference Proceedings",
+      year: "2023",
+      doi: "https://doi.org/10.1063/5.0162305",
+      authors: ["E. Payares", "J. Martinez-Santos"],
+    },
+    {
+      title: "Quantum N-Gram Models for Text Classification",
+      type: "conference",
+      venue: "IEEE Conference on Cognitive and Computational Aspects of Situation Management (CogSIMA)",
+      year: "2023",
+      doi: "https://doi.org/10.1109/CogSIMA59617.2023.10183600",
+      authors: ["E. Payares", "J. Martinez-Santos"],
+    },
+    {
+      title: "Parallel Quantum Computation of Molecular Properties",
+      type: "conference",
+      venue: "IOP Conference Series: Materials Science and Engineering",
+      year: "2021",
+      doi: "https://doi.org/10.1088/1757-899X/1154/1/012019",
+      authors: ["E. Payares", "J. Martinez-Santos"],
+    },
+
+  ],
+};
+
+const music: Music = {
+  path: "/music",
+  label: "Music",
+  title: `Music – ${person.name}`,
+  description: `Music projects by ${person.name}`,
+};
+
+const activities: Activities = {
+  path: "/activities",
+  label: "Activities",
+  title: `Activities – ${person.name}`,
+  description: `Competitions, certifications, and community involvement by ${person.name}`,
+  openSource: {
+    display: true,
+    title: "Open Source Contributions",
+    items: [
+      {
+        title: "Create a PyTorch simulator (Pull request #1360)",
+        description: "Creation of a quantum simulator to allow all quantum operations and measurements to be performed within the PyTorch workflow.",
+        year: "2021",
+        link: "https://github.com/PennyLaneAI/pennylane/pull/1360",
+      },
+    ],
+  },
+  competitions: {
+    display: true,
+    title: "Quantum Programming Competitions",
+    items: [
+      { name: "iQuHACK", organizer: "Massachusetts Institute of Technology", year: "2023" },
+      { name: "PennyLane Code Camp", organizer: "Xanadu Quantum Technologies", year: "2022" },
+      { name: "HAQS", organizer: "qBraid", year: "2022" },
+      { name: "iQuHACK", organizer: "Massachusetts Institute of Technology", year: "2022" },
+      { name: "QC Hack", organizer: "Quantum Coalition", year: "2021" },
+      { name: "UnitaryHack", organizer: "Unitary Fund", year: "2021" },
+      { name: "Qhack", organizer: "Xanadu Quantum Technologies", year: "2021" },
+    ],
+  },
+  certifications: {
+    display: true,
+    title: "Certifications",
+    items: [
+      { name: "Quantum Excellence at Qiskit Global Summer School on Quantum Machine Learning", issuer: "IBM", year: "2021" },
+      { name: "Introduction to Quantum Computing", issuer: "The Coding School", year: "2021" },
+      { name: "Applied Data Science with Python (Specialization)", issuer: "Coursera", year: "2020" },
+      { name: "Open Source Software Development, Linux and Git (Specialization)", issuer: "Coursera", year: "2020" },
+    ],
+  },
+  extracurriculars: {
+    display: false,
+    title: "",
+    items: [],
+  },
+};
+
+export { person, social, newsletter, home, about, blog, work, gallery, publications, music, activities };

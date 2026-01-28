@@ -238,3 +238,73 @@ export interface Gallery extends BasePageConfig {
     orientation: string;
   }>;
 }
+
+/**
+ * Publications page configuration.
+ * @description Configuration for the Publications page, including list of academic publications.
+ */
+export interface Publications extends BasePageConfig {
+  /** List of publications */
+  items: Array<{
+    /** Publication title */
+    title: string;
+    /** Type of publication */
+    type: "book-chapter" | "conference" | "journal";
+    /** Publication venue (journal, conference, or publisher) */
+    venue: string;
+    /** Publication year */
+    year: string;
+    /** DOI link (optional) */
+    doi?: string;
+    /** List of authors */
+    authors: string[];
+  }>;
+}
+
+/**
+ * Music page configuration.
+ * @description Configuration for the Music page placeholder.
+ */
+export interface Music extends BasePageConfig {}
+
+/**
+ * Activities page configuration.
+ * @description Configuration for the Activities page with competitions, certifications, etc.
+ */
+export interface Activities extends BasePageConfig {
+  openSource: {
+    display: boolean;
+    title: string;
+    items: Array<{
+      title: string;
+      description: string;
+      year: string;
+      link?: string;
+    }>;
+  };
+  competitions: {
+    display: boolean;
+    title: string;
+    items: Array<{
+      name: string;
+      organizer: string;
+      year: string;
+    }>;
+  };
+  certifications: {
+    display: boolean;
+    title: string;
+    items: Array<{
+      name: string;
+      issuer: string;
+      year?: string;
+    }>;
+  };
+  extracurriculars: {
+    display: boolean;
+    title: string;
+    items: Array<{
+      description: string;
+    }>;
+  };
+}
