@@ -1,6 +1,5 @@
-import { Column, Heading, Meta, Schema } from "@once-ui-system/core";
+import { Column, Heading, Meta, Schema, Text, Icon } from "@once-ui-system/core";
 import { baseURL, person, work } from "@/resources";
-import { Projects } from "@/components/work/Projects";
 
 export async function generateMetadata() {
   return Meta.generate({
@@ -14,7 +13,7 @@ export async function generateMetadata() {
 
 export default function ProjectsPage() {
   return (
-    <Column maxWidth="m" paddingTop="24">
+    <Column maxWidth="m" paddingY="xl" horizontal="center" vertical="center" gap="l" style={{ minHeight: "60vh" }}>
       <Schema
         as="webPage"
         baseURL={baseURL}
@@ -28,10 +27,16 @@ export default function ProjectsPage() {
           image: `${baseURL}${person.avatar}`,
         }}
       />
-      <Heading marginBottom="l" variant="heading-strong-xl" align="center">
-        {work.title}
+      <Icon name="grid" size="xl" onBackground="brand-weak" />
+      <Heading variant="display-strong-l" align="center">
+        Building cool stuff...
       </Heading>
-      <Projects />
+      <Text variant="body-default-l" onBackground="neutral-weak" align="center">
+        Currently too busy running quantum circuits to document them properly.
+      </Text>
+      <Text variant="body-default-m" onBackground="neutral-weak" align="center">
+        Projects coming soon!
+      </Text>
     </Column>
   );
 }

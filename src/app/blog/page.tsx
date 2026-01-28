@@ -1,7 +1,5 @@
-import { Column, Heading, Meta, Schema } from "@once-ui-system/core";
-import { Mailchimp } from "@/components";
-import { Posts } from "@/components/blog/Posts";
-import { baseURL, blog, person, newsletter } from "@/resources";
+import { Column, Heading, Meta, Schema, Text, Icon } from "@once-ui-system/core";
+import { baseURL, blog, person } from "@/resources";
 
 export async function generateMetadata() {
   return Meta.generate({
@@ -15,9 +13,9 @@ export async function generateMetadata() {
 
 export default function Blog() {
   return (
-    <Column maxWidth="m" paddingTop="24">
+    <Column maxWidth="m" paddingY="xl" horizontal="center" vertical="center" gap="l" style={{ minHeight: "60vh" }}>
       <Schema
-        as="blogPosting"
+        as="webPage"
         baseURL={baseURL}
         title={blog.title}
         description={blog.description}
@@ -29,18 +27,16 @@ export default function Blog() {
           image: `${baseURL}${person.avatar}`,
         }}
       />
-      <Heading marginBottom="l" variant="heading-strong-xl" marginLeft="24">
-        {blog.title}
+      <Icon name="book" size="xl" onBackground="brand-weak" />
+      <Heading variant="display-strong-l" align="center">
+        Still thinking what to write here...
       </Heading>
-      <Column fillWidth flex={1} gap="40">
-        <Posts range={[1, 1]} thumbnail />
-        <Posts range={[2, 3]} columns="2" thumbnail direction="column" />
-        <Mailchimp marginBottom="l" />
-        <Heading as="h2" variant="heading-strong-xl" marginLeft="l">
-          Earlier posts
-        </Heading>
-        <Posts range={[4]} columns="2" />
-      </Column>
+      <Text variant="body-default-l" onBackground="neutral-weak" align="center">
+        Probably something about quantum computing, physics, or why my code works but I don't know why.
+      </Text>
+      <Text variant="body-default-m" onBackground="neutral-weak" align="center">
+        Check back soon!
+      </Text>
     </Column>
   );
 }
