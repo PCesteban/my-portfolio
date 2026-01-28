@@ -21,6 +21,7 @@ import {
   PiBookBookmarkDuotone,
   PiImageDuotone,
   PiCameraDuotone,
+  PiMusicNoteDuotone,
 } from "react-icons/pi";
 
 import {
@@ -68,6 +69,7 @@ export const iconLibrary: Record<string, IconType> = {
   instagram: FaInstagram,
   scholar: SiGooglescholar,
   camera: PiCameraDuotone,
+  music: PiMusicNoteDuotone,
 };
 
 export type IconLibrary = typeof iconLibrary;

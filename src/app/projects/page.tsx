@@ -27,7 +27,7 @@ export default function ProjectsPage() {
           image: `${baseURL}${person.avatar}`,
         }}
       />
-      <Icon name="grid" size="xl" onBackground="brand-weak" />
+      <Icon name="rocket" size="xl" onBackground="brand-weak" />
       <Heading variant="display-strong-l" align="center">
         Building cool stuff...
       </Heading>
