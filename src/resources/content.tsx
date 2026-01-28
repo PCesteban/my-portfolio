@@ -99,7 +99,7 @@ const about: About = {
     experiences: [
       {
         company: "IQM Quantum Computers",
-        timeframe: "Feb 2025 – Present",
+        timeframe: "Feb 2025 – Aug 2025",
         role: "Quantum Machine Learning Intern",
         achievements: [
           <>Researching quantum kernel methods and projected quantum kernels in practical applications.</>,
