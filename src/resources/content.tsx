@@ -99,8 +99,8 @@ const about: About = {
     experiences: [
       {
         company: "IQM Quantum Computers",
-        timeframe: "Feb 2025 – Aug 2025",
-        role: "Quantum Machine Learning Intern",
+        timeframe: "Feb 2025 – Present",
+        role: "Junior Quantum Algorithm Engineer (Mar 2026) · QML Intern (Feb–Aug 2025)",
         achievements: [
           <>Researching quantum kernel methods and projected quantum kernels in practical applications.</>,
           <>Developing a quantum kernel method framework.</>,
